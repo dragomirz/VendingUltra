@@ -1,3 +1,6 @@
+
+import java.sql.*;
+import java.util.Scanner;
 public class Ingredients {
     final private int ingredient_id;
     private String ingredient_name;
@@ -8,6 +11,34 @@ public class Ingredients {
         this.ingredient_name = ingredient_name;
         this.quantity_available = quantity_available;
         this.unit = unit;
+    }
+    public static void ingredientCreator(String ingredientName){
+        Scanner sc = new Scanner(System.in);
+        int quantityAvailable;
+        String unit;
+        String dbUrl = "jdbc:mysql://localhost:3306/vending";
+        String dbUser = "root";
+        String dbPassword = "";
+        Connection conn = null;
+        String myQuery;
+        myQuery = "INSERT INTO Ingredients (ingredient_name, quantity_available, unit) VALUES (?, ?, ?)";
+        try {
+            conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+            PreparedStatement ps = conn.prepareStatement(myQuery);
+            System.out.println("Enter the available quantity:");
+            quantityAvailable = Integer.parseInt(sc.nextLine());
+            System.out.println("Enter the unit measurement");
+            unit = sc.nextLine();
+            ps.setString(1, ingredientName);
+            ps.setInt(2, quantityAvailable);
+            ps.setString(3, unit);
+            ps.executeUpdate();
+            System.out.println("Ingredient inserted successfully!");
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
     public int getIngredient_id() {
         return ingredient_id;

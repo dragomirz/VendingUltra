@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/0972f834-30e2-41ac-a482-81a9730acaa1/console_1.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/AdminMethods.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/Products.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/Vending.java" dialect="GenericSQL" />
   </component>
 </project>

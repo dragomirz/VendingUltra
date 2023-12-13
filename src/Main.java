@@ -4,7 +4,8 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        AdminMethods.getVendingCash(AdminMethods.generateMoneyContainer());
+        Vending.getVendingCash(Coins.generateMoneyContainer());
+        AdminMethods.productCreator();
     }
 
 
