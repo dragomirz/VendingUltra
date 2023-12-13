@@ -3,7 +3,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class AdminMethods {
-    public static LinkedHashMap<Integer, Integer> generateMoneyContainer(){
+    public static Coins generateMoneyContainer(){
         LinkedHashMap<Integer, Integer> Container = new LinkedHashMap<>();
         Container.put(200, 15);
         Container.put(100, 15);
@@ -11,11 +11,11 @@ public class AdminMethods {
         Container.put(20, 15);
         Container.put(10, 15);
         Container.put(5, 15);
-        return Container;
+        return new Coins(Container);
     }
-    public static void getVendingCash(LinkedHashMap<Integer, Integer> Container){
+    public static void getVendingCash(Coins wallet){
         System.out.println("  Money:");
-        for(Map.Entry<Integer, Integer> entry : Container.entrySet()){
+        for(Map.Entry<Integer, Integer> entry : wallet.getNominationsAmount().entrySet()){
             System.out.println(String.format("%.2f", entry.getKey() / 100.0) + " => " + entry.getValue());
         }
 

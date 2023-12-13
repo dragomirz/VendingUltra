@@ -3,21 +3,37 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Main {
-    public static LinkedHashMap<Integer, Integer> generateMoneyContainer(){
-        LinkedHashMap<Integer, Integer> Container = new LinkedHashMap<>();
-        Container.put(200, 15);
-        Container.put(100, 15);
-        Container.put(50, 15);
-        Container.put(20, 15);
-        Container.put(10, 15);
-        Container.put(5, 15);
-        return Container;
+    public static void main(String[] args) {
+        AdminMethods.getVendingCash(AdminMethods.generateMoneyContainer());
     }
-    public static void getVendingCash(LinkedHashMap<Integer, Integer> Container){
-        System.out.println("  Money:");
-        for(Map.Entry<Integer, Integer> entry : Container.entrySet()){
-            System.out.println(String.format("%.2f", entry.getKey() / 100.0) + " => " + entry.getValue());
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    public static LinkedHashMap<Integer, Integer> generateMoneyContainer(){
+//        LinkedHashMap<Integer, Integer> Container = new LinkedHashMap<>();
+//        Container.put(200, 15);
+//        Container.put(100, 15);
+//        Container.put(50, 15);
+//        Container.put(20, 15);
+//        Container.put(10, 15);
+//        Container.put(5, 15);
+//        return Container;
+//    }
+//    public static void getVendingCash(LinkedHashMap<Integer, Integer> Container){
+//        System.out.println("  Money:");
+//        for(Map.Entry<Integer, Integer> entry : Container.entrySet()){
+//            System.out.println(String.format("%.2f", entry.getKey() / 100.0) + " => " + entry.getValue());
+//        }
 
     }
 
@@ -164,6 +180,6 @@ public class Main {
 
 
 
-}
+
 //TODO CREATE BASIC METHOLOGY WORKING THIS WAY: 1.CODE STARTS 2.GET ALL INFO FROM DATABASE AND PUT INSIDE DIFFERENT DATA STRUCTURES AND VARIABLES
 //todo 3.USABLE VENDING MACHINE, 4AFTER USER/ADMIN FINISHES USING VENDING MACHINE UPDATE SQL AND DONE.

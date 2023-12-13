@@ -5,4 +5,12 @@ public class Coins {
     public Coins(LinkedHashMap<Integer, Integer> NominationAmount){
         this.NominationsAmount = NominationAmount;
     }
+
+    public LinkedHashMap<Integer, Integer> getNominationsAmount() {
+        return NominationsAmount;
+    }
+
+    public void setNominationsAmount(LinkedHashMap<Integer, Integer> nominationsAmount) {
+        NominationsAmount = nominationsAmount;
+    }
 }
