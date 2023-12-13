@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 public class Products {
     final private int product_id;
     private String product_name;
     private String product_type;
-    private Ingredients [] ingredients;
+    private ArrayList<Ingredients> ingredients;
     private int price;
-    public Products(int product_id, String product_name, String product_type, Ingredients [] ingredients, int price ){
+    public Products(int product_id, String product_name, String product_type, ArrayList<Ingredients> ingredients, int price ){
         this.product_id = product_id;
         this.product_name = product_name;
         this.product_type = product_type;
@@ -37,11 +39,11 @@ public class Products {
         this.product_type = product_type;
     }
 
-    public Ingredients[] getIngredients() {
+    public ArrayList<Ingredients> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Ingredients[] ingredients) {
+    public void setIngredients(ArrayList<Ingredients> ingredients) {
         this.ingredients = ingredients;
     }
 
